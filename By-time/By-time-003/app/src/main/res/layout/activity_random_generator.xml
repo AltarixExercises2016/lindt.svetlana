@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+
+
     tools:context="com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -21,6 +23,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_random_generetor" />
+    <include layout="@layout/content_random_generator" />
 
 </android.support.design.widget.CoordinatorLayout>

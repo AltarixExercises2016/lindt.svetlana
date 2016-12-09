@@ -11,5 +11,12 @@
     <string name="button6">Что же почитать?</string>
     <string name="action_main">Меню</string>
     <string name="title_activity_random_generetor">By-tyme</string>
+    <string name="about">
+        \n By-time\n
+        Version 1.0\n
+        Lindt Svetlana
+    </string>
+    <string name="pushButton">Мне кажется, или Вы забыли нажать на кнопку?</string>
+    <string name="start">Start</string>
 
 </resources>

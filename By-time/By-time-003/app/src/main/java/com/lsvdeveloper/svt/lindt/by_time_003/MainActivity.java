@@ -56,16 +56,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //noinspection SimplifiableIfStatement
         switch(id){
-            case R.id.action_main:
-            return true;
 
             case R.id.action_settings:
-            Intent intent1 = new Intent(this, SettingsActivity.class);
+            Intent intent1 = new Intent(this, com.lsvdeveloper.svt.lindt.by_time_003.SettingsActivity.class);
             startActivity(intent1);
             return true;
 
             case R.id.action_info:
-            Intent intent2 = new Intent(this, InfoActivity.class);
+            Intent intent2 = new Intent(this, com.lsvdeveloper.svt.lindt.by_time_003.ActivityAbout.class);
             startActivity(intent2);
             return true;
 
@@ -85,50 +83,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     switch(view.getId()){
         case R.id.button1:
-            //intentButton = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable.putExtra("name","table1");
-            //startActivity(intentButton);
-            startActivity(intentTable);
-//          String table = "table1";
+            intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
+
+            startActivity(intentButton);
+
              break;
 
         case R.id.button2:
-            intentButton = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable.putExtra("name","table2");
+            intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
+
             startActivity(intentButton);
 
 //          String table = "table2";
             break;
 
         case R.id.button3:
-            intentButton = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable.putExtra("name","table3");
+            intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
+
             startActivity(intentButton);
 //                String table = "table3";
             break;
         case R.id.button4:
-            intentButton = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable.putExtra("name","table4");
+            intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
+
             startActivity(intentButton);
 //          String table = "table4";
             break;
 
         case R.id.button5:
-            intentButton = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable.putExtra("name","table5");
+            intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
+
             startActivity(intentButton);
 //          String table = "table5";
             break;
 
         case R.id.button6:
-            intentButton = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable = new Intent(MainActivity.this, RandomGeneratorActivity.class);
-            intentTable.putExtra("name","table6");
+            intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
+
             startActivity(intentButton);
 //          String table = "table6";//использовать не String
             break;

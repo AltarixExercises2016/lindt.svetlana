@@ -3,25 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.lsvdeveloper.svt.lindt.by_time_003.MainActivity">
     <item
-        android:id="@+id/action_main"
-        android:orderInCategory="1"
-        android:title="@string/action_main"
-        app:showAsAction="never" />
-    <item
 
         android:id="@+id/action_settings"
-        android:orderInCategory="2"
+        android:orderInCategory="1"
         android:title="@string/action_settings"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_info"
-        android:orderInCategory="3"
+        android:orderInCategory="2"
         android:title="@string/action_info"
         app:showAsAction="never" />
     <item
 
         android:id="@+id/action_exit"
-        android:orderInCategory="4"
+        android:orderInCategory="3"
         android:title="@string/action_exit"
         app:showAsAction="never" />
 

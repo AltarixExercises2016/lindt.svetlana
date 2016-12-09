@@ -11,22 +11,24 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity"
-    tools:showIn="@layout/activity_random_generetor">
-
-    <TextView
-        android:text="Мне кажется, или Вы забыли нажать на кнопку?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textRandomGenerator" />
+    tools:showIn="@layout/activity_random_generator"
+    android:theme="@style/styleActivity">
 
     <Button
-        android:text="Start"
+        style="@style/styleButtonStart"
+        android:text="@string/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/start" />
+        android:id="@+id/start"
+         />
+
+    <TextView
+        android:text="@string/pushButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textRandomGenerator"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
