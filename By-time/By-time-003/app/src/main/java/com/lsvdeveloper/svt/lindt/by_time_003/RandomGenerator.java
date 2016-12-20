@@ -3,7 +3,7 @@ package com.lsvdeveloper.svt.lindt.by_time_003;
 import android.util.Log;
 
 /**
- * Created by Павел Вяткин on 01.12.2016.
+ * Created by Линдт Светлана on 01.12.2016.
  */
 
 public class RandomGenerator {
@@ -22,6 +22,7 @@ public class RandomGenerator {
         int i = (int) (Math.random()*EmulatorDatabase.getLength());
         return i;
     }
+
     public static int getRandomFromLength(){
         return randomFromLength;
     }

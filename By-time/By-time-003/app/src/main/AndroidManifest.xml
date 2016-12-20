@@ -3,6 +3,7 @@
     package="com.lsvdeveloper.svt.lindt.by_time_003">
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_bulb"
         android:label="@string/app_name"
@@ -10,7 +11,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,12 +19,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityAbout"
+            android:name=".FragmentAbout"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SettingsActivity" />
+        <activity android:name=".SettingsActivity"
+            />
         <activity
             android:name=".RandomGeneratorActivity"
-            android:label="@string/title_activity_random_generetor"
             android:theme="@style/AppTheme.NoActionBar" />
 
     </application>

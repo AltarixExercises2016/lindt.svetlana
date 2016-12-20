@@ -1,5 +1,7 @@
 package com.lsvdeveloper.svt.lindt.by_time_003;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button button4;
     Button button5;
     Button button6;
+    FragmentAbout fragAbout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button5.setOnClickListener(this);
         button6.setOnClickListener(this);
 
+        fragAbout = new FragmentAbout();
+
     }
 
     @Override
@@ -53,25 +58,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         //noinspection SimplifiableIfStatement
         switch(id){
 
             case R.id.action_settings:
-            Intent intent1 = new Intent(this, com.lsvdeveloper.svt.lindt.by_time_003.SettingsActivity.class);
-            startActivity(intent1);
+                Intent intent1 = new Intent(this, com.lsvdeveloper.svt.lindt.by_time_003.SettingsActivity.class);
+                startActivity(intent1);
             return true;
 
             case R.id.action_info:
-            Intent intent2 = new Intent(this, com.lsvdeveloper.svt.lindt.by_time_003.ActivityAbout.class);
-            startActivity(intent2);
+                fragmentTransaction.replace(R.id.frgmCont,fragAbout);
+                fragmentTransaction.commit();
             return true;
 
             case R.id.action_exit:
-            System.exit(0);
+                System.exit(0);
             return true;
         }
-
 
         return super.onOptionsItemSelected(item);
     }
@@ -79,49 +85,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         Intent intentButton;
-        Intent intentTable;
 
     switch(view.getId()){
         case R.id.button1:
             intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
-
+            intentButton.putExtra("nameTable","forOne");
             startActivity(intentButton);
-
              break;
 
         case R.id.button2:
             intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
-
+            intentButton.putExtra("nameTable","forCompany");
             startActivity(intentButton);
-
-//          String table = "table2";
             break;
 
         case R.id.button3:
             intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
-
+            intentButton.putExtra("nameTable","forChildren_1_3");
             startActivity(intentButton);
-//                String table = "table3";
             break;
+
         case R.id.button4:
             intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
-
+            intentButton.putExtra("nameTable","forChildren_3_6");
             startActivity(intentButton);
-//          String table = "table4";
             break;
 
         case R.id.button5:
             intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
-
+            intentButton.putExtra("nameTable","forChildren_6_");
             startActivity(intentButton);
-//          String table = "table5";
             break;
 
         case R.id.button6:
             intentButton = new Intent(MainActivity.this, com.lsvdeveloper.svt.lindt.by_time_003.RandomGeneratorActivity.class);
-
+            intentButton.putExtra("nameTable","reading");
             startActivity(intentButton);
-//          String table = "table6";//использовать не String
             break;
         }
     }

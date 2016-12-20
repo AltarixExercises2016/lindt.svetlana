@@ -18,5 +18,11 @@
     </string>
     <string name="pushButton">Мне кажется, или Вы забыли нажать на кнопку?</string>
     <string name="start">Start</string>
+    <string-array name="settings_title">
+        <item>Фон приложения</item>
+        <item>Звук</item>
+        <item>Вибрация</item>
+
+    </string-array>
 
 </resources>

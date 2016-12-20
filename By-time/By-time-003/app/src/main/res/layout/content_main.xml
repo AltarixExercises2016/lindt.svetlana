@@ -16,39 +16,52 @@
     android:theme="@style/styleActivity">
 
     <Button
+        style="@style/styleText"
         android:text="@string/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button1"
         />
     <Button
+        style="@style/styleText"
         android:text="@string/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button2"
         />
     <Button
+        style="@style/styleText"
         android:text="@string/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button3"
         />
     <Button
+        style="@style/styleText"
         android:text="@string/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button4"
         />
     <Button
+        style="@style/styleText"
         android:text="@string/button5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button5"
         />
     <Button
+        style="@style/styleText"
         android:text="@string/button6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button6"
         />
+    <FrameLayout
+        android:id="@+id/frgmCont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+    </FrameLayout>
+
 </LinearLayout>

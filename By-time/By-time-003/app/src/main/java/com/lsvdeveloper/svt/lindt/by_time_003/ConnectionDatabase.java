@@ -8,7 +8,7 @@ import android.util.Log;
  */
 
 public class ConnectionDatabase  {
-    private static DBHelper dbHelper;
+
 
 
     public  void go(){
@@ -16,9 +16,9 @@ public class ConnectionDatabase  {
 
 
     }
-    static int getLength() {
-        //SELECT COUNT(*) FROM table;
-        //SHOW TABLE STATUS FROM database WHERE Name = 'table';
+    static int getLength(String nameTable) {
+        //sqLiteDatabase.execSQL("select seq from sqlite_sequence were name = " +nameTable);
+
         Log.d("work","получаем кол-во строк");
         return 5;
     }
