@@ -2,7 +2,6 @@ package com.lsvdeveloper.svt.lindt.by_time_003;
 
 
 import android.content.Intent;
-import android.database.SQLException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -17,7 +16,8 @@ public class RandomGeneratorActivity extends AppCompatActivity implements View.O
     TextView textRandomGenerator;
 
     String nameTable;
-    private DBHelper dbHelper;
+    private DBHelperReading dbHelperReading;
+    DBHelper dbHelper;
 
 
     @Override
@@ -29,43 +29,42 @@ public class RandomGeneratorActivity extends AppCompatActivity implements View.O
 
         textRandomGenerator = (TextView) findViewById(R.id.textRandomGenerator);
 
-
         Button buttonStart = (Button) findViewById(R.id.start);
         buttonStart.setOnClickListener(this);
 
 
 
     }
-        @Override
-        public void onClick (View view){
-            Intent intent = getIntent();
-            nameTable = intent.getStringExtra("nameTable");
+    @Override
+    public void onClick (View view){
+        Intent intent = getIntent();
+        nameTable = intent.getStringExtra("nameTable");
+        if (nameTable.equals(DBHelperReading.TABLE_READING))
+        textRandomGenerator.setText(getStrReading());
+        else{textRandomGenerator.setText(getStr());}
+    }
 
-            textRandomGenerator.setText("");
-            //System.out.println(generateNumber());
-
-        }
-    int  generateNumber(){
+    String  getStrReading(){
+        dbHelperReading = new DBHelperReading(this);
+        String str = dbHelperReading.getRandomStr(nameTable);
+        Log.d("work","получаем строку");
+        return str;
+    }
+    String  getStr(){
         dbHelper = new DBHelper(this);
-        dbHelper.createDataBase();
-
-        try {
-            dbHelper.openDataBase();
-        }catch(SQLException sqle){
-            throw sqle;
-        }
-
-        Log.d("work","создаем случайное число");
-        int i = (int) (Math.random()*dbHelper.getLength("nameTable"));
-        return i;
+        String str = dbHelper.getRandomStr(nameTable);
+        Log.d("work","получаем строку");
+        return str;
     }
 
 
-    //Override
-    //protected void onDestroy() {
-    //    super.onDestroy();
-    //    db.close();
-    //    dbHelper.close();
-    //}
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(dbHelperReading!=null)
+        dbHelperReading.close();
+        if(dbHelper!=null)
+        dbHelper.close();
     }
+}
 
