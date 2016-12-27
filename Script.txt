@@ -1,0 +1,12 @@
+CREATE TABLE Books (_id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL, _author TEXT NOT NULL , _title TEXT NOT NULL )
+
+CREATE TABLE forCompany (_id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , _id_leisure INTEGER NOT NULL )
+
+CREATE TABLE leisure (_id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , _leisure TEXT NOT NULL )
+
+INSERT INTO Books (_author,_title) VALUES ('Рей Бредбери','"Вино из одуванчиков"');
+
+CREATE VIEW testView AS SELECT * FROM Books WHERE _author = Рей Бредбери
+
+
+CREATE TRIGGER del_leisure BEFORE DELETE ON leisure FOR EACH ROW  BEGIN DELETE FROM forCompany WHERE forCompany._id_leisure=OLD._id; END
